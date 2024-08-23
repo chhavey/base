@@ -1,0 +1,21 @@
+.content {
+  background: linear-gradient(
+    90deg,
+    rgba(172, 169, 255, 0.91) 0%,
+    rgba(172, 169, 255, 0.5) 50%,
+    rgba(172, 169, 255, 0.91) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 3s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: -200% 50%;
+  }
+}

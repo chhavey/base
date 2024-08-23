@@ -4,13 +4,13 @@
 
 .light-theme {
   background-color: #f5f5f5;
-  transition: background-color 0.7s ease, color 0.7s ease;
+  transition: background-color 0.7s ease;
   color: #000000;
 }
 
 .dark-theme {
   background-color: #161616;
-  transition: background-color 0.7s ease, color 0.7s ease;
+  transition: background-color 0.7s ease;
   color: #ffffff;
 }
 
@@ -50,6 +50,16 @@
 .dark-theme .signin-input:focus {
   background-color: #212121;
   transition: background-color 0.7s ease, color 0.7s ease;
+}
+
+.dark-theme .sidebar {
+  background-color: #000000;
+  /* color: #868686; */
+}
+
+.light-theme .sidebar {
+  background-color: white;
+  /* color: #868686; */
 }
 /* 
 @media (max-width: 1024px) {

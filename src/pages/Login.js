@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ReactComponent as Logo } from "../assets/purple-logo.svg";
+import { ReactComponent as Logo } from "../assets/logo.svg";
 import { ReactComponent as Logo2 } from "../assets/white-logo.svg";
 import { ReactComponent as User } from "../assets/user.svg";
 import { ReactComponent as Google } from "../assets/google.svg";
