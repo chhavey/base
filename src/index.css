@@ -61,6 +61,32 @@
   background-color: white;
   /* color: #868686; */
 }
+
+.dark-theme .buttons {
+  color: #000000;
+}
+
+.light-theme .buttons {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .dark-theme .navbar {
+    background-color: #000000;
+  }
+
+  .light-theme .navbar {
+    background-color: white;
+  }
+}
+
+/* For screens 768px and larger */
+@media (min-width: 768px) {
+  .dark-theme .navbar,
+  .light-theme .navbar {
+    background-color: transparent; /* No background color on larger screens */
+  }
+}
 /* 
 @media (max-width: 1024px) {
   .dark-theme {
