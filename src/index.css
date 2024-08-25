@@ -84,7 +84,7 @@
 @media (min-width: 768px) {
   .dark-theme .navbar,
   .light-theme .navbar {
-    background-color: transparent; /* No background color on larger screens */
+    background-color: transparent;
   }
 }
 /* 
@@ -94,3 +94,11 @@
     color: #000000;
   }
 } */
+/* In your CSS file */
+.sidebar-collapsed {
+  width: 10%;
+}
+
+.sidebar-expanded {
+  width: 22%;
+}
