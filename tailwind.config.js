@@ -27,7 +27,7 @@ module.exports = {
         "sidebar-light": "#0D0D0D",
 
         //background
-        "background-light": "#F5F5F5",
+        "background-light": "#fafafb",
         "background-dark": "#161616",
 
         //remove

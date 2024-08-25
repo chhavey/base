@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ReactComponent as Logo } from "../assets/logo.svg";
+import { ReactComponent as Logo } from "../assets/purple-logo.svg";
 import { ReactComponent as Logo2 } from "../assets/white-logo.svg";
 import { ReactComponent as User } from "../assets/user.svg";
 import { ReactComponent as Google } from "../assets/google.svg";
@@ -32,7 +32,7 @@ function Login() {
       <div className="hidden lg:block lg:w-1/2 bg-primary-dark rounded-xl ml-4 my-3 p-8">
         {/* Left Side Content */}
         <div className="flex flex-col m-auto rounded-xl bg-primary-light h-full relative">
-          <div className="flex items-center m-6 gap-2 py-2 px-3 rounded-3xl bg-white w-fit">
+          <div className="flex items-center m-6 gap-2 py-2 px-4 rounded-3xl bg-white w-fit">
             <Logo />
             <span className="font-montserrat text-xl font-bold text-black">
               Base

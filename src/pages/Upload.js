@@ -40,7 +40,7 @@ function Upload() {
       ];
 
       if (!validTypes.includes(file.type)) {
-        toast.error("Please upload a valid Excel or CSV file");
+        toast.error("Please upload a valid Excel file");
         setSelectedFile(null);
         fileInputRef.current.value = null;
         return;
@@ -51,29 +51,32 @@ function Upload() {
   };
 
   const handleUploadClick = () => {
-    if (selectedFile) {
-      setIsLoading(true);
-
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const data = new Uint8Array(e.target.result);
-        const workbook = XLSX.read(data, { type: "array" });
-        const sheetName = workbook.SheetNames[0];
-        const worksheet = workbook.Sheets[sheetName];
-        const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-
-        const headerRow = jsonData[0];
-        const rows = jsonData.slice(1);
-
-        setTimeout(() => {
-          setHeaders(headerRow);
-          setFileData(rows);
-          setIsLoading(false);
-        }, 3000);
-      };
-
-      reader.readAsArrayBuffer(selectedFile);
+    if (!selectedFile) {
+      toast.error("Please select a file before uploading");
+      return;
     }
+
+    setIsLoading(true);
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const data = new Uint8Array(e.target.result);
+      const workbook = XLSX.read(data, { type: "array" });
+      const sheetName = workbook.SheetNames[0];
+      const worksheet = workbook.Sheets[sheetName];
+      const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+      const headerRow = jsonData[0];
+      const rows = jsonData.slice(1);
+
+      setTimeout(() => {
+        setHeaders(headerRow);
+        setFileData(rows);
+        setIsLoading(false);
+      }, 3000);
+    };
+
+    reader.readAsArrayBuffer(selectedFile);
   };
 
   return (
@@ -170,8 +173,8 @@ function Upload() {
         </div>
 
         {fileData.length > 0 && (
-          <div className="flex flex-col items-center mt-8">
-            <h3 className="text-lg font-semibold mb-4">File Data</h3>
+          <div className="flex flex-col gap-4 p-8 mt-8 font-figtree">
+            <h3 className="text-lg font-semibold mb-4">Uploads</h3>
             <DataTable headers={headers} fileData={fileData} />
           </div>
         )}

@@ -24,9 +24,6 @@ function ComingSoon() {
               <span className="font-nunito text-xl">Base</span>
             </div>
           </div>
-          {/* <div className="hidden md:flex font-figtree font-semibold text-lg">
-            Upload CSV
-          </div> */}
           <div className="flex items-center space-x-4">
             <Bell className="cursor-pointer" />
             <Profile className="cursor-pointer" />

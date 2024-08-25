@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .light-theme {
-  background-color: #f5f5f5;
+  background-color: #fafafb;
   transition: background-color 0.7s ease;
   color: #000000;
 }
@@ -54,12 +54,12 @@
 
 .dark-theme .sidebar {
   background-color: #000000;
-  /* color: #868686; */
+  transition: background-color 0.7s ease;
 }
 
 .light-theme .sidebar {
   background-color: white;
-  /* color: #868686; */
+  transition: background-color 0.7s ease;
 }
 
 .dark-theme .buttons {
@@ -70,35 +70,89 @@
   color: #ffffff;
 }
 
+.dark-theme .table {
+  background-color: #0d0d0d;
+  transition: background-color 0.7s ease;
+}
+
+.light-theme .table {
+  background-color: #f5f5f5;
+  transition: background-color 0.7s ease;
+}
+
+.dark-theme .tableRow {
+  background-color: #161616;
+  transition: background-color 0.7s ease;
+}
+
+.light-theme .tableRow {
+  background-color: white;
+  transition: background-color 0.7s ease;
+}
+
+.dark-theme .tags {
+  color: #161616;
+}
+
+.light-theme .tags {
+  color: white;
+}
+
+.dark-theme .tableBorder {
+  border: #0d0d0d 15px solid;
+  transition: border 0.7s ease;
+}
+
+.light-theme .tableBorder {
+  border: #f5f5f5 15px solid;
+  transition: border 0.7s ease;
+}
+
+.dark-theme .addTag {
+  border: #1a1a1a 1px solid;
+  background-color: #0d0d0d;
+  transition: background-color 0.7s ease;
+}
+
+.light-theme .addTag {
+  border: #f2f2f2 1px solid;
+  background-color: white;
+  transition: background-color 0.7s ease;
+}
+
+.dark-theme .dropdown {
+  background-color: #0d0d0d;
+  transition: background-color 0.7s ease;
+}
+
+.light-theme .dropdown {
+  background-color: white;
+  transition: background-color 0.7s ease;
+}
+
+.dark-theme .dropdown .tag:hover {
+  background-color: #161616;
+}
+
+.light-theme .dropdown .tag:hover {
+  background-color: #f5f5f5;
+}
+
 @media (max-width: 767px) {
   .dark-theme .navbar {
     background-color: #000000;
+    transition: background-color 0.7s ease;
   }
 
   .light-theme .navbar {
     background-color: white;
+    transition: background-color 0.7s ease;
   }
 }
 
-/* For screens 768px and larger */
 @media (min-width: 768px) {
   .dark-theme .navbar,
   .light-theme .navbar {
     background-color: transparent;
   }
-}
-/* 
-@media (max-width: 1024px) {
-  .dark-theme {
-    background-color: #f5f5f5;
-    color: #000000;
-  }
-} */
-/* In your CSS file */
-.sidebar-collapsed {
-  width: 10%;
-}
-
-.sidebar-expanded {
-  width: 22%;
 }
